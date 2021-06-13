@@ -23,12 +23,9 @@ public:
 		pond(PpondName, Pexpanse, Plength, PmaxDepth, true) {}
 	explicit pond(std::string PpondName, double Pexpanse, double Plength) :
 		pond(PpondName, Pexpanse, Plength, 0, true) {}
-	explicit pond(std::string PpondName, double Pexpanse) :
-		pond(PpondName, Pexpanse, 0, 0, true) {}
-	explicit pond(std::string PpondName) :
-		pond(PpondName, 0, 0, 0, true) {}
-	explicit pond(std::string PpondName) :
-		pond("NoName", 0, 0, 0, true) {}
+	explicit pond(std::string PpondName, double Pexpanse) : pond(PpondName, Pexpanse, 0, 0, true) {}
+	explicit pond(std::string PpondName) : pond(PpondName, 0, 0, 0, true) {}
+	explicit pond() : pond("NoName", 0, 0, 0, true) {}
 	// деструктор
 	~pond() {}
 	//название
@@ -72,10 +69,32 @@ public:
 	//5. Для копирования объектов;
 	explicit pond(const pond& Pond) : pondName{ Pond.get_pondName() }, expanse{Pond.get_expanse()},
 		length{ Pond.get_length() }, maxDepth{ Pond.get_maxDepth() }, origin{Pond.get_origin()} {}
-	pond& operator = (const pond& Pond) {
+	void operator = (const pond& Pond) {
 		pondName = Pond.get_pondName(); expanse = Pond.get_expanse();
 		length = Pond.get_length(); maxDepth = Pond.get_maxDepth() ; origin = Pond.get_origin();
 	}
 	//6. Остальные методы на усмотрение разработчика (методы set и get)*/
 	/// void NAFIG(){}
+	void skan() {
+		std::string chois;
+
+		std::cout << "Enter the title :";
+		std::cin >> pondName;
+		std::cout << "Enter the average width of the reservoir :";
+		std::cin >> expanse;
+		std::cout << "Enter the average length of the reservoir :";
+		std::cin >> length;
+		std::cout << "Enter the average depth of the body of water :";
+		std::cin >> maxDepth;
+		std::cout << "Is it a natural body of water? Yes : Not";
+		std::cin >> chois;
+		origin = (chois == "Yes") ? true : false;
+	}
+
+	void print() {
+		std::cout << "Name of the reservoir :" << pondName << std::endl
+			<< "Reservoir area :" << pond::area() << std::endl
+			<< "The volume of the reservoir :" << pond::volume() << std::endl
+			<< "Reservoir type :"; pond::water();
+	}
 };
