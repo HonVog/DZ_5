@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Complex.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
-    <ClCompile Include="pond.cpp" />
+    <ClCompile Include="Namber.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pond.h" />
+    <ClInclude Include="Complex.h" />
+    <ClInclude Include="Namber.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
