@@ -1,21 +1,18 @@
 ﻿#include <iostream>
-#include <vector>
-
-#include "Namber.h"
-#include "Complex.h"
+#include "Flat.h"
+#include "Overcoat.h"
 
 int main()
 {
-	Number n1{1,4};
-	Number n2{3,5};
-	n2 = n1 + n2;
-	std::cout << n2.getI() <<'/'<<n2.getF()<< std::endl;
+	Overcoat q1{ "Shirt","Khrushchev", 10, 1000 };
+	Overcoat q2;
+	q2 = q1;
+	q2.print();
 
-	Complex c1{6,2};
-	Complex c2{4,9};
-	c2 = c1 * c2;
+	Flat f1;
+	Flat f2{ "Hotel", 100, 2000000 };
+	f1 = f2;
+	f1.print();
 
-	c2.print();
-	
 	return 0;
 }
