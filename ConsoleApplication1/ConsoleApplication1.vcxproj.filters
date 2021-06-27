@@ -18,12 +18,12 @@
     <ClCompile Include="ConsoleApplication1.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="String_New.cpp">
+    <ClCompile Include="String.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="String_New.h">
+    <ClInclude Include="String.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
