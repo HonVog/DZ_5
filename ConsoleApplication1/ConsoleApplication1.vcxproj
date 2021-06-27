@@ -140,10 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1.cpp" />
-    <ClCompile Include="pond.cpp" />
+    <ClCompile Include="String_New.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pond.h" />
+    <ClInclude Include="String_New.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

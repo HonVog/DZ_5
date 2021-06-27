@@ -1,2 +1,4 @@
 ﻿  ConsoleApplication1.cpp
-  ConsoleApplication1.vcxproj -> C:\Users\Georgiy_PC\Desktop\DZ\ConsoleApplication1\Debug\ConsoleApplication1.exe
+  String_New.cpp
+  Создание кода...
+C:\Users\Georgiy_PC\Desktop\DZ\ConsoleApplication1\String_New.h(38): error C4716: String_New::print: должна возвращать значение
